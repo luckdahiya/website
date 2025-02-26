@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Institute of Cyber Security & Ethical Hacking (GICSEH)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <style>
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    }
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#headcontainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#both 
+{
+    color: #2c3e50;
+    margin-top: 100px; 
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+#contact-info p {
+        margin: 0;
+    }
+
+#navbar {
+        background-color: #003366;
+        padding: 15px 0;
+        width: 100%;
+        position: fixed; 
+        top: 80px;
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+#navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        }
+
+#navbar ul li {
+        margin: 0 15px;
+        position: relative;
+        }
+
+#navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 15px;
+        display: block;
+}
+#navbar ul li a:hover {
+        background-color: #3498db;
+        color: white;
+        border-radius: 5px;
+        }
+
+#dropdown-content, #double-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003366;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#dropdown-content a, #double-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#dropdown-content a:hover, #double-dropdown-content a:hover {
+    background-color: #3498db;
+}
+
+#navbar ul li:hover #dropdown-content {
+    display: block;
+}
+
+#double-dropdown-content {
+    top: 0;
+    left: 100%;
+    padding-left: 10px;
+}
+
+#navbar ul li #double-dropdown:hover #double-dropdown-content {
+    display: block;
+}
+
+#slide {
+            background-image: url('/img/recp.jpg');
+            height: 600px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: slide 15s infinite;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px black;
+            font-size: 48px;
+            font-weight: bold;
+            margin-top: 155px;
+}
+
+@keyframes slide 
+{
+       25% { background-image: url('/img/imgg.jpg'); }
+       50% { background-image: url('/img/clas.jpg'); }
+       75% { background-image: url('/img/img.jpg'); }
+}
+
+#logos {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#logos img {
+    width: 150px;
+    margin: 0 20px;
+    height: auto;
+}
+
+#about {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+#batches {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#batch1, #batch2 {
+    background-color: #fff;
+    padding: 30px;
+    margin: 10px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#batch1 h3, #batch2 h3 {
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+#batch1 p, #batch2 p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+#location 
+        {
+            background-color: #34495e;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+#location p {
+    font-size: 18px;
+}
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+#button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#button:hover 
+{
+        background-color: #c0392b;
+}
+
+#reviews {
+        background-color: #fff;
+        padding: 50px 20px;
+        text-align: center;
+}
+
+#reviews h2 {
+       font-size: 32px;
+        color: #2c3e50;
+}
+
+#review1, #review2 {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+}
+
+#review1 p, #review2 p {
+            font-size: 18px;
+        font-style: italic;
+        margin: 0;
+}
+
+#review1 b, 
+#review2 b{
+        display: block;
+        margin-top: 10px;
+        font-weight: bold
+}
+        
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+#footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+#footer-content h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#footer-content ul {
+  list-style: none;
+  padding: 15px;
+  gap: 60px;
+  display: flex;
+  margin-left: 15px;
+  
+}
+
+#footer-content ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#social {
+  text-align: center;
+}
+
+#icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+
+#footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+}
+
+#footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+#location {
+  padding: 20px;
+  cursor: text;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+#office-address {
+  font-size: 14px;
+  margin: 0;
+}
+#contact p a
+{
+    color: #3498db;
+}
+#contact-info {
+  font-size: 16px;
+  margin: 0; 
+}
+
+    </style>
+</head>
+<body>
+    <div id="both">
+    <header id="header">
+        
+        <div id="headcontainer">
+            <div id="logo">
+                Global Institute of Cyber Security & Ethical Hacking (GICSEH)
+            </div>
+            <div id="contact-info">
+                <p>+918800955639, +919871700866, +918368840052</p>
+                <p>Need Help? Call us free</p>
+            </div>
+        </div>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="/in.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li id="dropdown">
+                <a href="/courses.html">Courses</a>
+                <div id="dropdown-content">
+                    <div id="double-dropdown">
+                        <a href="/cyber.html">Cyber Security</a>
+                        <div id="double-dropdown-content">
+                            <a href="#">Introduction to Cybersecurity</a>
+                            <a href="#">Network Security Fundamentals</a>
+                            <a href="#">Cryptography Basics</a>
+                            <a href="#">Incident Response</a>
+                            <a href="#">Ethical Hacking Overview</a>
+                        </div>
+                    </div>
+                    <div id="double-dropdown">
+                        <a href="/hacking.html">Ethical Hacking</a>
+                        <div id="double-dropdown-content">
+                            <a href="#">Ethical Hacking Fundamentals</a>
+                            <a href="#">Penetration Testing</a>
+                            <a href="#">Advanced Exploitation Techniques</a>
+                            <a href="#">Vulnerability Assessment</a>
+                            <a href="#">Social Engineering</a>
+                        </div>
+                    </div>
+                    <div id="double-dropdown">
+                        <a href="/excel.html">Advanced Excel & Networking</a>
+                        <div id="double-dropdown-content">
+                            <a href="#">Excel Basics and Functions</a>
+                            <a href="#">Data Visualization with Excel</a>
+                            <a href="#">Pivot Tables and Pivot Charts</a>
+                            <a href="#">Excel Macros and Automation</a>
+                            <a href="#">Networking Fundamentals</a>
+                            <a href="#">Network Configuration and Management</a>
+                            <a href="#">Network Security Essentials</a>
+                            <a href="#">Advanced Networking Techniques</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </li>
+            <li id="dropdown">
+                <a href="/trainers.html">Trainers</a>
+                <div id="dropdown-content">
+                    <a href="#sonia">Ms. Sonia (Web Development)</a>
+                    <a href="#shalu">Ms. Shalu (Java)</a>
+                    <a href="#shashi">Mr. Shashi (Advanced Excel & Networking)</a>
+                    <a href="#shovik">Mr. Souvik (CEH)</a>
+                </div>
+            </li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/location.html">Location</a></li>
+        </ul>
+    </nav>
+</div>
+    <div id="slide">
+        <!-- Slide content -->
+    </div>
+    <div id="logos">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google Logo">
+        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo"> -->
+    </div>
+    <section id="about">
+        <h2>Welcome to Global Institute Of Cyber Security and Ethical Hacking</h2>
+        <p>
+            At the Global Institute of Cyber Security & Ethical Hacking, we provide top-notch education in cybersecurity, ethical hacking, and related fields. Our courses are designed by industry experts to help you stay ahead in the ever-evolving world of cyber threats.
+        </p>
+        <a href="/courses.html" id="button">Enroll Now</a>
+    </section>
+    <section id="batches">
+        <div id="batch1">
+            <h3>Cyber Security Basics</h3>
+            <p>Start Date: 1st September 2024</p>
+            <p>Duration: 4 Weeks</p>
+            <p>Description: Learn the fundamentals of cybersecurity, including key concepts, tools, and best practices.</p>
+        </div>
+        <div id="batch2">
+            <h3>Advanced Ethical Hacking</h3>
+            <p>Start Date: 10th September 2024</p>
+            <p>Duration: 6 Weeks</p>
+            <p>Description: Deep dive into advanced hacking techniques, penetration testing, and defensive strategies.</p>
+        </div>
+    </section>
+    <section id="reviews">
+        <h2>What Our Students Say</h2>
+        <div id="review1">
+            <p>"The courses at GICSEH provided me with a solid foundation in cybersecurity. The hands-on experience and expert instructors made a huge difference in my learning journey."</p>
+            <b><i>- Akash, Student</i></b>
+        </div>
+        <div id="review2">
+            <p>"I highly recommend GICSEH to anyone looking to advance their career in ethical hacking. The content was relevant and the instructors were incredibly knowledgeable."</p>
+            <b><i>- Dev, Student</i></b>
+        </div>
+    </section>
+      <footer>
+        <div id="footer-content">
+          <div id="courses">
+            <h3>Our Courses</h3>
+            <ul>
+                <div id="ek">
+              <li><a href="#">Ethical Hacking</a></li>
+              <li><a href="#">Machine Learning</a></li>
+              <li><a href="#">Cyber Security</a></li>
+              <li><a href="#">Networking</a></li>
+            </div>
+            <div id="ekaur">
+              <li><a href="#">Artificial Intelligence</a></li>
+              <li><a href="#">Data Science</a></li>
+              <li><a href="#">Cloud Computing</a></li>
+              <li><a href="#">Blockchain</a></li>
+              </div>
+            </ul>
+          </div>
+          <div id="social">
+            <h3>Follow Us</h3>
+            <div id="icons">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+          </div>
+          <div id="contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="https://gicseh.com/">info@gicseh.com</a></p>
+            <p>Phone: +918800955639</p>
+          </div>
+        </div>
+        <section id="location">
+            <h2>Our Location</h2>
+            <h4>
+              <p id="office-address">Office: G-20, 2nd Floor, Preet Vihar, Near Preet Vihar Metro Station Gate No 4, Delhi-110092</p>
+              <p id="contact-info">Contact: +918800955639 | Email: info@gicseh.com</p>
+            </h4>
+          </section>
+          
+        <div id="footer-bottom">
+          <p>&copy; 2024 GICSEH. All rights reserved.</p>
+          <p>Designed by GICSEH Web Team | <a href="#">Privacy Policy</a></p>
+        </div>
+      </footer>
+    </body>
+    </html>
+    
+</body>
+</html>

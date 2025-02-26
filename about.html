@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Institute of Cyber Security & Ethical Hacking (GICSEH)</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+body 
+{
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+#header 
+{
+    position: fixed;
+    top: 0;
+    right: 5px;
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+#headcontainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#both {
+    color: #2c3e50;
+    margin-top: 100px;
+
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+        #contact-info p {
+            margin: 0;
+        }
+        #navbar 
+        {
+            background-color: #003366;
+            padding: 15px 0;
+            width: 100%;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        #navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+        
+        }
+
+        #navbar ul li a:hover {
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+
+#dropdown-content, #double-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #003366;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+#dropdown-content a, #double-dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          
+        }
+
+#dropdown-content a:hover, #double-dropdown-content a:hover {
+            background-color: #3498db;
+        }
+
+#navbar ul li:hover #dropdown-content {
+            display: block;
+        }
+
+#double-dropdown-content {
+            top: 0;
+            left: 100%;
+            padding-left: 10px;
+        }
+
+#navbar ul li #double-dropdown:hover #double-dropdown-content {
+            display: block;
+        }
+
+        #slide {
+            background-image: url('/img/recp.jpg');
+            height: 600px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: slide 15s infinite;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px black;
+            font-size: 48px;
+            font-weight: bold;
+            margin-top: 155px;
+        }
+        @keyframes slide {
+            25% { background-image: url('/img/clas.jpg'); }
+            50% { background-image: url('/img/img.jpg'); }
+            75% { background-image: url('/img/class.jpg'); }
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .batches .batch {
+            background-color: #fff;
+            padding: 30px;
+            margin: 10px auto;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .batches .batch h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        .batches .batch p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+        #button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #e74c3c;
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        #button:hover {
+            background-color: #c0392b;
+        }
+        #nav-active {
+            display: block;
+        }
+        #achv-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    height: 250px;
+}
+
+#achv-container img {
+    max-width: 350px; 
+    height: 200px; 
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#achv-container img:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+</head>
+<body>
+    <div id="both">
+        <header id="header">
+        <div id="headcontainer">
+            <div id="logo">Global Institute of Cyber Security & Ethical Hacking (GICSEH)</div>
+            <div id="contact-info">
+                <p>+918800955639, +919871700866, +918368840052</p>
+                <p>Need Help? Call us free</p>
+            </div>
+        </div>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="/in.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li id="dropdown">
+                <a href="/courses.html">Courses</a>
+                <div id="dropdown-content">
+                    <div id="double-dropdown">
+                        <a href="/cyber.html">Cyber Security</a>
+                        <div id="double-dropdown-content">
+                            <a href="#">Introduction to Cybersecurity</a>
+                            <a href="#">Network Security Fundamentals</a>
+                            <a href="#">Cryptography Basics</a>
+                            <a href="#">Incident Response</a>
+                            <a href="#">Ethical Hacking Overview</a>
+                        </div>
+                    </div>
+                    <div id="double-dropdown">
+                        <a href="/hacking.html">Ethical Hacking</a>
+                        <div id="double-dropdown-content">
+                            <a href="#">Ethical Hacking Fundamentals</a>
+                            <a href="#">Penetration Testing</a>
+                            <a href="#">Advanced Exploitation Techniques</a>
+                            <a href="#">Vulnerability Assessment</a>
+                            <a href="#">Social Engineering</a>
+                        </div>
+                    </div>
+                    <div id="double-dropdown">
+                        <a href="/">Machine Learning</a>
+                        <div id="double-dropdown-content">
+                            <a href="#">Introduction to Machine Learning</a>
+                            <a href="#">Supervised Learning</a>
+                            <a href="#">Unsupervised Learning</a>
+                            <a href="#">Deep Learning</a>
+                            <a href="#">Machine Learning in Practice</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li id="dropdown">
+                <a href="/trainers.html">Trainers</a>
+                <div id="dropdown-content">
+                    <a href="#sonia">Ms. Sonia (Web Development)</a>
+                    <a href="#shalu">Ms. Shalu (Java)</a>
+                    <a href="#shashi">Mr. Shashi (Advanced Excel & Networking)</a>
+                    <a href="#shovik">Mr. Souvik (CEH)</a>
+                </div>
+            </li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/location.html">Location</a></li>
+        
+        </ul>
+    </nav>
+    </div>
+    <div id="slide">
+        <!-- <p>Learn, Secure, Excel!</p> -->
+    </div>
+  
+    <section id="about">
+        <h2>About Global Institute of Cyber Security & Ethical Hacking</h2>
+        <p>
+            The Global Institute of Cyber Security & Ethical Hacking (GICSEH) is dedicated to providing cutting-edge education and training in the field of cybersecurity and ethical hacking. Our mission is to equip individuals with the skills and knowledge needed to excel in the rapidly evolving world of cyber threats.
+            Our expert trainers have years of experience in the industry and are committed to delivering high-quality instruction through practical, hands-on learning experiences. We offer a range of courses designed to meet the needs of both beginners and advanced professionals.
+            At GICSEH, we believe in fostering a collaborative learning environment where students can thrive and develop their potential. Join us to advance your career and make a significant impact in the field of cybersecurity.
+            The Global Institute of Cyber Security & Ethical Hacking (GICSEH) in Preet Vihar, Delhi, is a leading institution offering advanced training in cybersecurity and ethical hacking.  
+            This branch is recognized for its comprehensive and up-to-date curriculum, tailored to meet industry standards and demands.  
+            Students gain hands-on experience through practical labs and real-world scenarios, ensuring they are well-prepared for the cybersecurity landscape.  
+            The faculty at GICSEH consists of industry experts who bring valuable insights and experience into the classroom.  
+            In addition to technical skills, the courses emphasize ethical practices and legal aspects of hacking.  
+            The institute is equipped with modern facilities, providing an optimal learning environment.  
+            Regular workshops, seminars, and guest lectures from industry professionals are organized to keep students abreast of the latest trends and technologies.  
+            GICSEH in Preet Vihar also offers career support, including resume building, interview preparation, and job placement assistance.  
+            The location in Preet Vihar is easily accessible, making it convenient for students from different parts of Delhi and nearby areas.  
+            The institute maintains a strong network with cybersecurity companies, offering students opportunities for internships and collaborations.  
+            GICSEH’s certification programs are globally recognized, enhancing the employability of its graduates.  
+            Alumni from this branch have successfully secured positions in top IT and cybersecurity firms both in India and abroad.  
+            The institute’s commitment to quality education and student success has made it a trusted name in the field of cybersecurity training.  
+            Whether you are a beginner or a professional looking to enhance your skills, GICSEH, Preet Vihar, offers courses to match your needs.  
+            With its focus on practical knowledge and ethical hacking, GICSEH is shaping the next generation of cybersecurity experts.
+        </p>
+    </section>
+    <div id="achv">
+        <h2>Achievements of Global Institute of Cyber Security & Ethical Hacking (GICSEH)</h2>
+        <div id="achv-container">
+            <img src="/img/c1.jpg" alt="Achievement 1">
+            <img src="/img/c2.jpg" alt="Achievement 2">
+            <img src="/img/c3.jpg" alt="Achievement 3">
+            <img src="/img/c4.jpg" alt="Achievement 4">
+            <img src="/img/c5.jpg" alt="Achievement 5">
+        </div>
+    </div>
+    
+
+
+    <footer>
+        <p>&copy; 2024 GICSEH. All rights reserved.</p>
+    </footer>
+</body>
+</html>

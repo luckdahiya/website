@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GICSEH Courses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #headcontainer {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        #contact-info p {
+            margin: 0;
+        }
+
+        #navbar {
+            background-color: #003366;
+            padding: 15px 0;
+            width: 100%;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        #navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        #navbar ul li a:hover {
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .dropdown-content, .double-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #003366;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a, .double-dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover, .double-dropdown-content a:hover {
+            background-color: #3498db;
+        }
+
+        #navbar ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        .double-dropdown-content {
+            top: 0;
+            left: 100%;
+            padding-left: 10px;
+        }
+
+        #navbar ul li .double-dropdown:hover .double-dropdown-content {
+            display: block;
+        }
+
+        #courses {
+            padding: 100px 20px 50px;
+            text-align: center;
+            background-color: #ffffff;
+            margin-top: 120px;
+        }
+
+        #courses h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .course-card {
+            display: inline-block;
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            width: calc(33% - 40px);
+            height: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        .course-card h3 {
+            color: #e74c3c;
+            margin-top: 0;
+        }
+
+        .course-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #e74c3c;
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="headcontainer">
+            <div id="logo">
+                Global Institute of Cyber Security & Ethical Hacking (GICSEH)
+            </div>
+            <div id="contact-info">
+                <p>+918800955639, +919871700866, +918368840052</p>
+                <p>Need Help? Call us free</p>
+            </div>
+        </div>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="/in.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li class="double-dropdown">
+                <a href="#">Courses</a>
+                <div class="double-dropdown-content">
+                    <a href="/ethical-hacking.html">Ethical Hacking</a>
+                    <a href="/cyber-security.html">Cyber Security</a>
+                    <a href="/java.html">Java</a>
+                    <a href="/web-development.html">Web Development</a>
+                    <a href="/penetration-testing.html">Penetration Testing</a>
+                    <a href="/machine-learning.html">Machine Learning</a>
+                    <li><a href="/trainers.html">Trainers</a></li>
+                    <li><a href="/gallery.html">Gallery</a></li>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="courses">
+        <h2>Our Courses</h2>
+        <div class="course-card">
+            <h3>Ethical Hacking</h3>
+            <p>Learn the latest techniques in ethical hacking to protect systems from cyber threats. This course covers penetration testing, network security, and vulnerability assessment.</p>
+            <a href="/hacking.html" class="button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Cyber Security</h3>
+            <p>Get hands-on training in cyber security principles, practices, and tools. This course focuses on securing networks, systems, and applications from various threats.</p>
+            <a href="/cyber.html" class="button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Java</h3>
+            <p>Master the fundamentals of Java programming with our comprehensive course. Learn about object-oriented programming, data structures, and software development techniques.</p>
+            <a href="/java.html" class="button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Web Development</h3>
+            <p>Build modern, responsive websites with our web development course. Learn HTML, CSS, JavaScript, and popular frameworks to create dynamic web applications.</p>
+            <a href="/web.html" class="button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Advanced Excel</h3>
+            <p>Enhance your Excel skills with advanced techniques for data analysis, automation, and visualization. This course covers complex formulas, macros, and pivot tables.</p>
+            <a href="/excel.html" class="button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Networking</h3>
+            <p>Gain expertise in computer networking concepts and practices. This course covers network design, protocols, troubleshooting, and network security.</p>
+            <a href="/excel.html" class="button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Penetration Testing</h3>
+            <p>Understand the techniques used in penetration testing to find and exploit vulnerabilities in systems. This course covers various tools and methodologies for security assessments.</p>
+            <a href="/pntrtn.html" class="button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>CEH</h3>
+            <p>Become a Certified Ethical Hacker (CEH) with our comprehensive training. Learn about hacking techniques, countermeasures, and ethical hacking principles.</p>
+            <a href="/ceh.html" class="button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>CCNA</h3>
+            <p>Prepare for the Cisco Certified Network Associate (CCNA) certification with our in-depth course. Learn about networking fundamentals, IP connectivity, and network security.</p>
+            <a href="/ccna.html" class="button">Learn More</a>
+        </div>
+        <div class="course-card">
+            <h3>Python</h3>
+            <p>Learn Python programming from scratch with our course. Understand the basics of Python, data analysis, web development, and automation.</p>
+            <a href="/python.html" class="button">Learn More</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Global Institute of Cyber Security & Ethical Hacking (GICSEH). All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
