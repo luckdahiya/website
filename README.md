@@ -41,5 +41,3 @@ For inquiries, reach out via:
 📧 **Email:** [info@gicseh.com] 
 📞 **Phone:** +91 8800955639 
 
----
-   git clone https://github.com/your-username/website.git
